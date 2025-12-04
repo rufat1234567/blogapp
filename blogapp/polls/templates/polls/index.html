@@ -1,0 +1,233 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieland Clone</title>
+   <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Foodieland<span class="dot">.</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </nav>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="categories container">
+        <div class="section-header">
+            <h2>Categories</h2>
+            <button class="btn-light">View All Categories</button>
+        </div>
+        <div class="category-grid">
+            <div class="cat-card bg-grey">
+                <img src="https://cdn-icons-png.flaticon.com/512/1046/1046751.png" alt="Breakfast">
+                <span>Breakfast</span>
+            </div>
+            <div class="cat-card bg-green">
+                <img src="https://cdn-icons-png.flaticon.com/512/2909/2909841.png" alt="Vegan">
+                <span>Vegan</span>
+            </div>
+            <div class="cat-card bg-red">
+                <img src="https://cdn-icons-png.flaticon.com/512/3143/3143643.png" alt="Meat">
+                <span>Meat</span>
+            </div>
+            <div class="cat-card bg-yellow">
+                <img src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" alt="Dessert">
+                <span>Dessert</span>
+            </div>
+            <div class="cat-card bg-orange">
+                <img src="https://cdn-icons-png.flaticon.com/512/135/135620.png" alt="Lunch">
+                <span>Lunch</span>
+            </div>
+            <div class="cat-card bg-brown">
+                <img src="https://cdn-icons-png.flaticon.com/512/2224/2224256.png" alt="Chocolate">
+                <span>Chocolate</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="recipes container">
+        <div class="center-header">
+            <h2>Simple and tasty recipes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.</p>
+        </div>
+
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60" alt="Burger">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Big and Juicy Wagyu Beef Cheeseburger</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-utensils"></i> Snack</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1599084993091-1a80152a795e?auto=format&fit=crop&w=500&q=60" alt="Salmon">
+                    <div class="heart-icon"><i class="fas fa-heart liked"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Fresh Lime Roasted Salmon with Ginger Sauce</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-fish"></i> Fish</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=500&q=60" alt="Pancake">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Strawberry Oatmeal Pancake with Honey Syrup</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-utensils"></i> Breakfast</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=60" alt="Salad">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Fresh and Healthy Mixed Mayonnaise Salad</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-leaf"></i> Healthy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=500&q=60" alt="Meatballs">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Chicken Meatballs with Cream Cheese</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-drumstick-bite"></i> Meat</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card ad-card">
+               <div class="ad-content">
+                   <h3>Don't forget to eat healthy food</h3>
+                   <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=60" alt="Salad">
+                   <p>www.foodieland.com</p>
+               </div>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=60" alt="Pancake">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>Fruity Pancake with Orange & Blueberry</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-utensils"></i> Sweet</span>
+                    </div>
+                </div>
+            </div>
+             <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=60" alt="Chicken Rice">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>The Best Easy One Pot Chicken and Rice</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-utensils"></i> Snack</span>
+                    </div>
+                </div>
+            </div>
+             <div class="recipe-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1608219992759-8d74ed8d76eb?auto=format&fit=crop&w=500&q=60" alt="Pasta">
+                    <div class="heart-icon"><i class="far fa-heart"></i></div>
+                </div>
+                <div class="card-info">
+                    <h3>The Creamiest Creamy Chicken and Bacon Pasta</h3>
+                    <div class="meta">
+                        <span><i class="far fa-clock"></i> 30 Minutes</span>
+                        <span><i class="fas fa-utensils"></i> Noodles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section container">
+        <div class="newsletter-box">
+            <h2>Deliciousness to your inbox</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.</p>
+            
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email address...">
+                <button type="submit">Subscribe</button>
+            </form>
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" class="decor-left" alt="food">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=200&q=60" class="decor-right" alt="plate">
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">Foodieland<span class="dot">.</span></div>
+                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit.</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="#">Recipes</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+                <a href="#">About us</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Flowbase. Powered by Elvin</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

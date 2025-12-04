@@ -1,0 +1,370 @@
+/* Ümumi Tənzimləmələr */
+:root {
+    --primary-black: #000000;
+    --grey-text: #666666;
+    --light-blue: #E7FAFE;
+    --accent-bg: #E3F1FF;
+    --bg-gradient-1: linear-gradient(180deg, rgba(112, 130, 70, 0) 0%, rgba(112, 130, 70, 0.1) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: var(--primary-black);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Lobster', cursive; /* Və ya oxşar bold serif */
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.logo .dot {
+    color: #FF7426;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #FF7426;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+/* CATEGORIES */
+.categories {
+    margin-top: 60px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.btn-light {
+    background-color: #E7FAFE;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+}
+
+.cat-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    /* Kölgə effekti */
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+}
+
+.cat-card span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Kateqoriya rəngləri (Qradient effekti) */
+.bg-grey { background: linear-gradient(180deg, rgba(100,100,100,0) 0%, rgba(200,200,200,0.15) 100%); }
+.bg-green { background: linear-gradient(180deg, rgba(50,200,50,0) 0%, rgba(50,255,50,0.1) 100%); }
+.bg-red { background: linear-gradient(180deg, rgba(200,50,50,0) 0%, rgba(255,50,50,0.1) 100%); }
+.bg-yellow { background: linear-gradient(180deg, rgba(200,200,50,0) 0%, rgba(255,255,50,0.15) 100%); }
+.bg-orange { background: linear-gradient(180deg, rgba(200,100,50,0) 0%, rgba(255,150,50,0.1) 100%); }
+.bg-brown { background: linear-gradient(180deg, rgba(100,50,50,0) 0%, rgba(150,80,80,0.1) 100%); }
+
+/* RECIPES */
+.recipes {
+    margin-top: 100px;
+}
+
+.center-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.center-header p {
+    color: var(--grey-text);
+    margin-top: 15px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: 0.3s;
+    background: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.heart-icon .liked {
+    color: red;
+}
+
+.card-info {
+    padding: 0 20px 25px 20px;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.meta {
+    display: flex;
+    gap: 20px;
+    color: var(--grey-text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.meta i {
+    margin-right: 5px;
+}
+
+/* Reklam kartı */
+.ad-card {
+    background: #051618 url('https://www.transparenttextures.com/patterns/stardust.png'); /* Tünd fon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.ad-content {
+    padding: 20px;
+}
+
+.ad-content h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ad-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+
+.ad-content p {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+    margin: 100px auto;
+}
+
+.newsletter-box {
+    background-color: #E7F9FD;
+    border-radius: 40px;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-box h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter-box p {
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    color: var(--grey-text);
+}
+
+.subscribe-form {
+    background: white;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    max-width: 480px;
+    width: 100%;
+}
+
+.subscribe-form input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.subscribe-form button {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.decor-left, .decor-right {
+    position: absolute;
+    width: 150px;
+    opacity: 0.8;
+}
+
+.decor-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-20deg) translate(-30px, 30px);
+}
+
+.decor-right {
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: translate(30px, 30px);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    margin-left: 30px;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 14px;
+}
